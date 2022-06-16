@@ -35,7 +35,7 @@
 
 <script>
 //import axios from 'axios';
-
+//para hacer peticiones restfull
 export default {
     name: "SignUp",
 
