@@ -52,8 +52,8 @@
 					</div>
 
 					<div style="position: absolute; right: 30px; top: 30px;" *ngIf="!isProfileViewerOwner">
-						<button mat-raised-button color="white" *ngIf="!viewerFollowsProfileUser" (click)="openFollowConfirmDialog(profileUser.id)">Seguir</button>
-						<button mat-raised-button color="warn" *ngIf="viewerFollowsProfileUser" (click)="openUnfollowConfirmDialog(profileUser.id)">Dejar de Seguir</button>
+						<button mat-raised-button color="white" *ngIf="!viewerFollowsProfileUser" (click)="openFollowConfirmDialog(profileUser.id)"><mat-icon>person_add</mat-icon></button>
+						<button mat-raised-button color="warn" *ngIf="viewerFollowsProfileUser" (click)="openUnfollowConfirmDialog(profileUser.id)"><mat-icon>person_remove</mat-icon></button>
 					</div>
 				</div>
 			</div>

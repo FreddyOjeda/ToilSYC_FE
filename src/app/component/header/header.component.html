@@ -1,5 +1,5 @@
 <mat-toolbar   class="position-fixed top-0 mat-elevation-z3 p-4" style="z-index: 999; background-color: #003366;">
-	<a href="/" class="text-white text-center text-decoration-none" *ngIf="isUserLoggedIn" >Principal</a>
+	<a href="/" class="text-white text-center text-decoration-none" *ngIf="isUserLoggedIn" ><mat-icon>home</mat-icon></a>
 	<a href="/" class="text-white text-decoration-none" style="position: absolute; right: 45%;">Bienvenido a Toil SyC</a>
 
 	<span class="example-spacer"></span>
@@ -14,6 +14,14 @@
 	<a mat-raised-button *ngIf="!isUserLoggedIn" href="/signup">Crear Cuenta</a>
 
 	<div *ngIf="isUserLoggedIn">
+		
+		<button mat-icon-button class="text-white" [matMenuTriggerFor]="chatMenu">
+			<mat-icon>question_answer</mat-icon>
+		</button>
+		<mat-menu #chatMenu="matMenu" xPosition="before">
+			<a mat-menu-item href="/profile"><mat-icon>tag_faces</mat-icon>Proximamente</a>
+		</mat-menu>
+		
 		<button mat-icon-button class="text-white" (click)="openSearchDialog()">
 			<mat-icon>search</mat-icon>
 		</button>
@@ -115,9 +123,9 @@
 			<mat-icon>more_vert</mat-icon>
 		</button>
 		<mat-menu #mainMenu="matMenu" xPosition="before">
-			<a mat-menu-item href="/profile">Perfil</a>
-			<a mat-menu-item href="/settings">Configuracion</a>
-			<a mat-menu-item href="/logout">Cerrar Sesion</a>
+			<a mat-menu-item href="/profile"><mat-icon>account_box</mat-icon>Perfil</a>
+			<a mat-menu-item href="/settings"><mat-icon>settings</mat-icon>Configuracion</a>
+			<a mat-menu-item href="/logout"><mat-icon>input</mat-icon>Cerrar Sesion</a>
 		</mat-menu>
 	</div>
 </mat-toolbar>
