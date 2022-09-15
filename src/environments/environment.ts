@@ -4,9 +4,9 @@
 
 export const environment = {
 	production: false,
-	apiUrl: 'http://localhost:8090/api/v1',
-	defaultProfilePhotoUrl: 'http://localhost:4200/assets/images/avatar.jpg',
-	defaultCoverPhotoUrl: 'http://localhost:4200/assets/images/cover.jpg'
+	apiUrl: 'https://toil-syc-backend.herokuapp.com/api/v1',
+	defaultProfilePhotoUrl: 'https://toilsyc.herokuapp.com/assets/images/avatar.jpg',
+	defaultCoverPhotoUrl: 'https://toilsyc.herokuapp.com/assets/images/cover.jpg'
 };
 
 /*
